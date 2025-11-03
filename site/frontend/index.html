@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go-Gin Articles API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Articles Dashboard</h1>
+        </header>
+
+        <div class="controls">
+            <input type="text" id="author-search" placeholder="Search by author...">
+            <button id="show-add-form-btn">Add New Article</button>
+        </div>
+
+        <main id="articles-container">
+            <!-- Articles will be loaded here by JavaScript -->
+        </main>
+
+        <div id="form-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <form id="article-form">
+                    <input type="hidden" id="article-id">
+                    <h2>Add/Edit Article</h2>
+                    <input type="text" id="article-title" placeholder="Title" required>
+                    <input type="text" id="article-author" placeholder="Author" required>
+                    <textarea id="article-content" placeholder="Content" required></textarea>
+                    <button type="submit">Save Article</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
